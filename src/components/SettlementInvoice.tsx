@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, ExternalLink, Copy, X } from "lucide-react";
 
 // --- Debt Settlement Algorithm ---
-const members = ["Shashwat", "Lucky", "Rohan", "Priya"];
+const members = ["Shashwat", "Lucky", "Rohan"];
 const txHash = "0x7a3f...b29e";
 const totalAmount = 150;
 
