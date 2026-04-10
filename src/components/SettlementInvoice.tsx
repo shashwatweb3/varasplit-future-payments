@@ -115,6 +115,7 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
           <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
           <span className="text-xs font-medium text-primary">Optimized Settlement ✅</span>
         </motion.div>
+        <p className="text-[11px] text-muted-foreground mb-6">Minimized to {transactions.length} transaction{transactions.length !== 1 ? "s" : ""}</p>
 
         {/* Members */}
         <div className="flex items-center gap-1 mb-6">
