@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, ExternalLink, Copy, X } from "lucide-react";
 
 const transactions = [
-  { from: "Rahul", to: "You", amount: 100 },
-  { from: "Aman", to: "You", amount: 50 },
+  { from: "Shashwat", to: "Lucky", amount: 37.5 },
+  { from: "Shashwat", to: "Rohan", amount: 37.5 },
+  { from: "Lucky", to: "Rohan", amount: 37.5 },
 ];
 
-
-const members = ["You", "Rahul", "Aman", "Priya"];
+const members = ["Shashwat", "Lucky", "Rohan", "Priya"];
 const txHash = "0x7a3f...b29e";
 const totalAmount = 150;
 
@@ -81,7 +81,7 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
           className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-6"
         >
           <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-medium text-primary">Settlement Complete ✅</span>
+          <span className="text-xs font-medium text-primary">Equally Settled ✅</span>
         </motion.div>
 
         {/* Members */}
