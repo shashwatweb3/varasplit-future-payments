@@ -5,7 +5,6 @@ import HowItWorks from "@/components/HowItWorks";
 import SettlementInvoice from "@/components/SettlementInvoice";
 import WhyVaraspit from "@/components/WhyVaraspit";
 import SocialProof from "@/components/SocialProof";
-import CoreFeatures from "@/components/CoreFeatures";
 import ComingSoon from "@/components/ComingSoon";
 import Footer from "@/components/Footer";
 
@@ -18,7 +17,6 @@ const Index = () => (
     <SettlementInvoice />
     <WhyVaraspit />
     <SocialProof />
-    <CoreFeatures />
     <ComingSoon />
     <Footer />
   </div>
