@@ -13,6 +13,7 @@ const Index = () => (
     <Particles />
     <HeroSection />
     <HowItWorks />
+    <FeaturesBlock />
     <SettlementInvoice />
     <WhyVaraspit />
     <SocialProof />
