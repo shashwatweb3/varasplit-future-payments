@@ -38,7 +38,7 @@ function CountUp({ target, duration = 1.5 }: { target: number; duration?: number
     return () => observer.disconnect();
   }, [target, duration]);
 
-  return <span ref={ref}>₹{value}</span>;
+  return <span ref={ref}>${value} USDC</span>;
 }
 
 function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
@@ -121,7 +121,7 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
                   <span className="font-medium">{tx.to}</span>
                 </span>
               </div>
-              <span className="font-display font-semibold text-primary">₹{tx.amount}</span>
+              <span className="font-display font-semibold text-primary">${tx.amount} USDC</span>
             </motion.div>
           ))}
         </div>
