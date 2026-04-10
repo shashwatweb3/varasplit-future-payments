@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Check, ExternalLink, Copy, X } from "lucide-react";
 
 const transactions = [
-  { from: "Rahul", to: "You", amount: 100 },
-  { from: "Aman", to: "You", amount: 50 },
+  { from: "Shashwat", to: "Lucky", amount: 37.5 },
+  { from: "Shashwat", to: "Rohan", amount: 37.5 },
+  { from: "Lucky", to: "Rohan", amount: 37.5 },
 ];
 
-
-const members = ["You", "Rahul", "Aman", "Priya"];
+const members = ["Shashwat", "Lucky", "Rohan", "Priya"];
 const txHash = "0x7a3f...b29e";
 const totalAmount = 150;
 
