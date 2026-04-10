@@ -2,15 +2,47 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ExternalLink, Copy, X } from "lucide-react";
 
-const transactions = [
-  { from: "Shashwat", to: "Lucky", amount: 37.5 },
-  { from: "Shashwat", to: "Rohan", amount: 37.5 },
-  { from: "Lucky", to: "Rohan", amount: 37.5 },
-];
-
+// --- Debt Settlement Algorithm ---
 const members = ["Shashwat", "Lucky", "Rohan", "Priya"];
 const txHash = "0x7a3f...b29e";
 const totalAmount = 150;
+
+// Shashwat paid $150 for 4 people → each owes $37.50
+function computeMinimalSettlement() {
+  const perPerson = totalAmount / members.length;
+  const balances: Record<string, number> = {};
+  // Shashwat paid everything; others paid nothing
+  members.forEach((m) => {
+    balances[m] = m === "Shashwat" ? totalAmount - perPerson : -perPerson;
+  });
+
+  const creditors: { name: string; amount: number }[] = [];
+  const debtors: { name: string; amount: number }[] = [];
+
+  for (const [name, bal] of Object.entries(balances)) {
+    if (bal > 0.01) creditors.push({ name, amount: bal });
+    else if (bal < -0.01) debtors.push({ name, amount: Math.abs(bal) });
+  }
+
+  // Sort: largest first
+  creditors.sort((a, b) => b.amount - a.amount);
+  debtors.sort((a, b) => b.amount - a.amount);
+
+  const txs: { from: string; to: string; amount: number }[] = [];
+  let i = 0, j = 0;
+  while (i < debtors.length && j < creditors.length) {
+    const settled = Math.min(debtors[i].amount, creditors[j].amount);
+    txs.push({ from: debtors[i].name, to: creditors[j].name, amount: Math.round(settled * 100) / 100 });
+    debtors[i].amount -= settled;
+    creditors[j].amount -= settled;
+    if (debtors[i].amount < 0.01) i++;
+    if (creditors[j].amount < 0.01) j++;
+  }
+
+  return txs;
+}
+
+const transactions = computeMinimalSettlement();
 
 function CountUp({ target, duration = 1.5 }: { target: number; duration?: number }) {
   const [value, setValue] = useState(0);
@@ -81,8 +113,9 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
           className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-6"
         >
           <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-medium text-primary">Equally Settled ✅</span>
+          <span className="text-xs font-medium text-primary">Optimized Settlement ✅</span>
         </motion.div>
+        <p className="text-[11px] text-muted-foreground mb-6">Minimized to {transactions.length} transaction{transactions.length !== 1 ? "s" : ""}</p>
 
         {/* Members */}
         <div className="flex items-center gap-1 mb-6">
