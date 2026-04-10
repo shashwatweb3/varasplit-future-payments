@@ -46,7 +46,7 @@ const HeroSection = () => {
         >
           <button className="btn-primary-glow font-display">Coming Soon</button>
           <a
-            href="https://x.com"
+            href="https://x.com/Shashwat_web3"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline-glow font-display"
