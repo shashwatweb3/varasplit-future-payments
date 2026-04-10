@@ -90,7 +90,7 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
         <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-primary/40 rounded-br-3xl" />
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center justify-between mb-4">
           <div>
             <p className="text-xs text-muted-foreground font-body uppercase tracking-wider">Settlement Invoice</p>
             <h3 className="font-display text-xl font-bold mt-1">Goa Trip 🏖️</h3>
@@ -105,20 +105,44 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
           </motion.div>
         </div>
 
-        {/* Status */}
+        {/* Context tagline */}
+        <motion.div
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+          className="mb-5"
+        >
+          <p className="text-sm font-medium text-foreground">Trip settled without the chaos.</p>
+          <p className="text-xs text-muted-foreground mt-0.5">No reminders. No screenshots. Just 1 click.</p>
+        </motion.div>
+
+        {/* Who paid */}
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
-          className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-3 py-1 mb-6"
+          className="flex items-center gap-2 bg-accent/30 border border-border/50 rounded-xl px-4 py-2.5 mb-5"
         >
-          <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-          <span className="text-xs font-medium text-primary">Optimized Settlement ✅</span>
+          <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center text-xs font-bold text-primary">S</div>
+          <span className="text-sm"><span className="font-semibold">Shashwat</span> <span className="text-muted-foreground">paid</span> <span className="font-semibold text-primary">${totalAmount} USDC</span> <span className="text-muted-foreground">for the group</span></span>
         </motion.div>
-        <p className="text-[11px] text-muted-foreground mb-6">Minimized to {transactions.length} transaction{transactions.length !== 1 ? "s" : ""}</p>
+
+        {/* Status */}
+        <div className="flex items-center gap-3 mb-5">
+          <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.35 }}
+            className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-3 py-1"
+          >
+            <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="text-xs font-medium text-primary">Optimized Settlement ✅</span>
+          </motion.div>
+          <span className="text-[11px] text-muted-foreground">Minimized to {transactions.length} txns</span>
+        </div>
 
         {/* Members */}
-        <div className="flex items-center gap-1 mb-6">
+        <div className="flex items-center gap-1 mb-5">
           {members.map((m, i) => (
             <motion.div
               key={m}
@@ -134,8 +158,8 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
           <span className="text-xs text-muted-foreground ml-2">{members.length} members</span>
         </div>
 
-        {/* Transactions */}
-        <div className="space-y-3 mb-6">
+        {/* Animated Transfer Flow */}
+        <div className="space-y-3 mb-5">
           {transactions.map((tx, i) => (
             <motion.div
               key={i}
@@ -148,9 +172,15 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
                 <div className="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-xs font-bold text-primary">
                   {tx.from[0]}
                 </div>
-                <span className="text-sm">
+                <span className="text-sm flex items-center gap-1">
                   <span className="font-medium">{tx.from}</span>
-                  <span className="text-muted-foreground mx-2">→</span>
+                  <motion.span
+                    className="text-primary inline-flex items-center mx-1 tracking-tighter text-xs"
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut", delay: i * 0.3 }}
+                  >
+                    ➝➝➝
+                  </motion.span>
                   <span className="font-medium">{tx.to}</span>
                 </span>
               </div>
@@ -158,6 +188,31 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
             </motion.div>
           ))}
         </div>
+
+        {/* Net Balances */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="rounded-xl bg-accent/20 border border-border/40 p-4 mb-5"
+        >
+          <p className="text-[10px] uppercase tracking-widest text-muted-foreground font-medium mb-2">Final Balances</p>
+          <div className="space-y-1.5">
+            {members.map((m) => {
+              const perPerson = totalAmount / members.length;
+              const bal = m === "Shashwat" ? totalAmount - perPerson : -perPerson;
+              const isPositive = bal > 0;
+              return (
+                <div key={m} className="flex items-center justify-between text-sm">
+                  <span className="font-medium">{m}</span>
+                  <span className={isPositive ? "text-green-400 font-semibold" : "text-red-400 font-semibold"}>
+                    {isPositive ? `gets $${Math.abs(bal).toFixed(0)}` : `owes $${Math.abs(bal).toFixed(0)}`}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
 
         {/* Divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-4" />
