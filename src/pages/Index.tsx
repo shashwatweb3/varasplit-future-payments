@@ -1,5 +1,6 @@
 import Particles from "@/components/Particles";
 import HeroSection from "@/components/HeroSection";
+import FeaturesBlock from "@/components/FeaturesBlock";
 import HowItWorks from "@/components/HowItWorks";
 import SettlementInvoice from "@/components/SettlementInvoice";
 import WhyVaraspit from "@/components/WhyVaraspit";
@@ -13,6 +14,7 @@ const Index = () => (
     <Particles />
     <HeroSection />
     <HowItWorks />
+    <FeaturesBlock />
     <SettlementInvoice />
     <WhyVaraspit />
     <SocialProof />
