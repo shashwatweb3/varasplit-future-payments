@@ -35,7 +35,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-8 text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto leading-relaxed"
         >
-          VaraSplit makes group payments seamless on-chain.
+          Varaspit makes group payments seamless on-chain.
         </motion.p>
 
         <motion.div

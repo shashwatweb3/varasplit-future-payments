@@ -8,7 +8,7 @@ const items = [
   { icon: Box, text: "Built on Vara" },
 ];
 
-const WhyVaraSplit = () => (
+const WhyVaraspit = () => (
   <section className="relative py-32 px-6">
     <div className="max-w-4xl mx-auto">
       <motion.h2
@@ -17,7 +17,7 @@ const WhyVaraSplit = () => (
         viewport={{ once: true }}
         className="font-display text-3xl sm:text-5xl font-bold text-center mb-16"
       >
-        Why <span className="text-primary">VaraSplit</span>
+        Why <span className="text-primary">Varaspit</span>
       </motion.h2>
 
       <div className="grid sm:grid-cols-2 gap-6">
@@ -42,4 +42,4 @@ const WhyVaraSplit = () => (
   </section>
 );
 
-export default WhyVaraSplit;
+export default WhyVaraspit;

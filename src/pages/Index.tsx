@@ -2,7 +2,7 @@ import Particles from "@/components/Particles";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
 import SettlementInvoice from "@/components/SettlementInvoice";
-import WhyVaraSplit from "@/components/WhyVaraSplit";
+import WhyVaraspit from "@/components/WhyVaraspit";
 import SocialProof from "@/components/SocialProof";
 import ComingSoon from "@/components/ComingSoon";
 import Footer from "@/components/Footer";
@@ -13,7 +13,7 @@ const Index = () => (
     <HeroSection />
     <HowItWorks />
     <SettlementInvoice />
-    <WhyVaraSplit />
+    <WhyVaraspit />
     <SocialProof />
     <ComingSoon />
     <Footer />

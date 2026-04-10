@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Varaspit
 
 TODO: Document your project here
