@@ -30,7 +30,7 @@ const cards = [
       "Perfect for:",
       "• Freelance payouts",
       "• Bounties",
-      "• Salary splits",
+      "• Salary",
       "",
       "No fake screenshots. Real proof.",
     ],
