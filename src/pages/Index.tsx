@@ -1,6 +1,7 @@
 import Particles from "@/components/Particles";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
+import MoreThanSplitting from "@/components/MoreThanSplitting";
 import SettlementInvoice from "@/components/SettlementInvoice";
 import WhyVarasplit from "@/components/WhyVarasplit";
 import SocialProof from "@/components/SocialProof";
@@ -12,6 +13,7 @@ const Index = () => (
     <Particles />
     <HeroSection />
     <HowItWorks />
+    <MoreThanSplitting />
     <SettlementInvoice />
     <WhyVarasplit />
     <SocialProof />
