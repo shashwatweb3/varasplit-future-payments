@@ -237,7 +237,7 @@ function InvoiceCard({ inModal = false }: { inModal?: boolean }) {
         {/* Timestamp */}
         <div className="mt-4 text-center">
           <p className="text-[10px] text-muted-foreground">April 10, 2026 · 14:32 UTC</p>
-          <p className="text-[10px] text-muted-foreground/60 mt-1">Powered by Varaspit</p>
+          <p className="text-[10px] text-muted-foreground/60 mt-1">Powered by Varasplit</p>
         </div>
       </div>
     </motion.div>
@@ -248,7 +248,7 @@ const SettlementInvoice = () => {
   const [showModal, setShowModal] = useState(false);
   const [copied, setCopied] = useState(false);
 
-  const shareText = `We settled our trip in 1 click. No chaos. No confusion. Just on-chain proof. 🧾⚡\n\n#Varaspit #Vara`;
+  const shareText = `We settled our trip in 1 click. No chaos. No confusion. Just on-chain proof. 🧾⚡\n\n#Varasplit #Vara`;
 
   const handleShare = () => {
     const url = `https://x.com/intent/tweet?text=${encodeURIComponent(shareText)}`;

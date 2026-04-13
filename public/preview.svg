@@ -12,7 +12,7 @@
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
   <circle cx="600" cy="200" r="80" fill="url(#textGrad)" opacity="0.1"/>
-  <text x="600" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#textGrad)">Varaspit</text>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="url(#textGrad)">Varasplit</text>
   <text x="600" y="340" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#94a3b8">Fast, On-Chain Interactive App</text>
   <text x="600" y="380" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#64748b">Built on Vara Network</text>
   <rect x="450" y="420" width="300" height="4" fill="url(#textGrad)" opacity="0.6"/>

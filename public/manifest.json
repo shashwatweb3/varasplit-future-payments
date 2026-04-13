@@ -1,7 +1,7 @@
 {
-  "name": "Varaspit",
-  "short_name": "Varaspit",
-  "description": "Varaspit — fast, on-chain interactive app",
+  "name": "Varasplit",
+  "short_name": "Varasplit",
+  "description": "Varasplit — fast, on-chain interactive app",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
