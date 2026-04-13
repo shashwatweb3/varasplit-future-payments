@@ -12,11 +12,11 @@ const Index = () => (
   <div className="relative min-h-screen overflow-x-hidden">
     <Particles />
     <HeroSection />
-    <HowItWorks />
-    <MoreThanSplitting />
     <SettlementInvoice />
     <WhyVarasplit />
     <SocialProof />
+    <HowItWorks />
+    <MoreThanSplitting />
     <ComingSoon />
     <Footer />
   </div>
