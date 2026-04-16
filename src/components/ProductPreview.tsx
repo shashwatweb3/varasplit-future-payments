@@ -15,7 +15,7 @@ const ProductPreview = () => (
         transition={{ duration: 0.6 }}
         className="text-primary font-display font-medium tracking-widest uppercase text-sm mb-8"
       >
-        🚀 Live Product
+        On testnet
       </motion.p>
 
       <motion.h2
