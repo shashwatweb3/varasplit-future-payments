@@ -45,12 +45,12 @@ const HeroSection = () => {
           className="mt-12 flex flex-col sm:flex-row gap-4 justify-center"
         >
           <a
-            href="https://varasplit-y8xv-six.vercel.app/create"
+            href="https://varasplit-y8xv-six.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary-glow font-display inline-flex items-center gap-2 justify-center"
           >
-            Create Group <ArrowRight className="w-4 h-4" />
+            VaraSplit <ArrowRight className="w-4 h-4" />
           </a>
           <button
             disabled
