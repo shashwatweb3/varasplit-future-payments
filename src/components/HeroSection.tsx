@@ -5,8 +5,14 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[82vh] flex items-center justify-center overflow-hidden px-6">
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/20 gradient-blob animate-blob-move" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/10 gradient-blob animate-blob-move" style={{ animationDelay: "-7s" }} />
-      <div className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full bg-primary/15 gradient-blob animate-blob-move" style={{ animationDelay: "-13s" }} />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-primary/10 gradient-blob animate-blob-move"
+        style={{ animationDelay: "-7s" }}
+      />
+      <div
+        className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full bg-primary/15 gradient-blob animate-blob-move"
+        style={{ animationDelay: "-13s" }}
+      />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
         <motion.p
@@ -52,6 +58,7 @@ const HeroSection = () => {
           >
             VaraSplit <ArrowRight className="w-4 h-4" />
           </a>
+
           <button
             disabled
             className="btn-outline-glow font-display inline-flex items-center gap-2 justify-center opacity-60 cursor-not-allowed"

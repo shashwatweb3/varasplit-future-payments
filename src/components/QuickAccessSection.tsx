@@ -13,7 +13,9 @@ const QuickAccessSection = () => {
         <div className="grid lg:grid-cols-2 gap-6">
           <div className="glass-card p-6">
             <h3 className="font-display text-xl font-semibold mb-3">Explore Documentation</h3>
-            <p className="text-muted-foreground mb-6">Read complete VaraSplit flows, architecture, wallet mechanics, and settlement proofs.</p>
+            <p className="text-muted-foreground mb-6">
+              Read complete VaraSplit flows, architecture, wallet mechanics, and settlement proofs.
+            </p>
             <Link to="/docs" className="btn-outline-glow inline-flex items-center gap-2 !py-2.5 !px-5 text-sm">
               Open Docs <ArrowRight className="w-4 h-4" />
             </Link>
@@ -21,7 +23,9 @@ const QuickAccessSection = () => {
 
           <div className="glass-card p-6">
             <h3 className="font-display text-xl font-semibold mb-3">Open VaraSplit App</h3>
-            <p className="text-muted-foreground mb-6">Go to the live VaraSplit experience to create groups and manage settlements.</p>
+            <p className="text-muted-foreground mb-6">
+              Go to the live VaraSplit experience to create groups and manage settlements.
+            </p>
             <a
               href="https://varasplit-y8xv-six.vercel.app/"
               target="_blank"
