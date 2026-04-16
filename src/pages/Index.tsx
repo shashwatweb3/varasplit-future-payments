@@ -4,7 +4,7 @@ import HowItWorks from "@/components/HowItWorks";
 import MoreThanSplitting from "@/components/MoreThanSplitting";
 import SettlementInvoice from "@/components/SettlementInvoice";
 import WhyVarasplit from "@/components/WhyVarasplit";
-import SocialProof from "@/components/SocialProof";
+
 import ComingSoon from "@/components/ComingSoon";
 import Footer from "@/components/Footer";
 
@@ -15,7 +15,7 @@ const Index = () => (
     <HowItWorks />
     <SettlementInvoice />
     <WhyVarasplit />
-    <SocialProof />
+    
     <MoreThanSplitting />
     <ComingSoon />
     <Footer />
