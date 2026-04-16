@@ -50,7 +50,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="btn-primary-glow font-display inline-flex items-center gap-2 justify-center"
           >
-            Varasplit <ArrowRight className="w-4 h-4" />
+            VaraSplit <ArrowRight className="w-4 h-4" />
           </a>
           <button
             disabled
