@@ -4,8 +4,7 @@ import HowItWorks from "@/components/HowItWorks";
 import MoreThanSplitting from "@/components/MoreThanSplitting";
 import SettlementInvoice from "@/components/SettlementInvoice";
 import WhyVarasplit from "@/components/WhyVarasplit";
-
-import ComingSoon from "@/components/ComingSoon";
+import ProductPreview from "@/components/ProductPreview";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -15,9 +14,8 @@ const Index = () => (
     <HowItWorks />
     <SettlementInvoice />
     <WhyVarasplit />
-    
     <MoreThanSplitting />
-    <ComingSoon />
+    <ProductPreview />
     <Footer />
   </div>
 );
